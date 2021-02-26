@@ -18,8 +18,16 @@ body {
 }
 .text{
     font-family: 'Heebo';
-    font-size: 60px;
+    font-size: 55px;
     color:white;
+}
+.txt-user{
+    font-family: 'Heebo';
+    color:#5c3287;
+}
+.txt-need{
+    font-family: 'Heebo-L';
+    color:#5c3287;
 }
 .btn-custom{
     background-color:#440f71;
