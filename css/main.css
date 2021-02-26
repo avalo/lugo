@@ -61,3 +61,20 @@ body {
     height: 40px;
     font-family: 'Heebo-L';
 }
+.bg-card{
+    background-color: #fadb54;
+    border:none;
+    border-radius: 25px;
+}
+i{
+    color: white;
+    margin-top: 25px;
+}
+h3{
+    color:white;
+    font-family:'Heebo' ;
+}
+h4{
+    color:white;
+    font-family:'Heebo-L' ;
+}
