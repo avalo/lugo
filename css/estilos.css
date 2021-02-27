@@ -1,0 +1,16 @@
+.navbar-dark {
+    background-color: #563D7C !important;
+    height: 90px;
+}
+
+.modal-header {
+    background-color: #563D7C !important;
+}
+
+.img-fluid {
+    border-radius: 12px !important;
+}
+
+.card {
+    border-radius: 12px !important;
+}
