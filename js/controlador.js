@@ -61,7 +61,7 @@ var categorias = [{
         icono: "fas fa-first-aid",
         empresas: [{
                 nombreEmpresa: "Empresa 1",
-                imagen: "img/banner.jpg",
+                imagen: "img/Farmacia 1.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -86,7 +86,7 @@ var categorias = [{
             },
             {
                 nombreEmpresa: "Empresa 2",
-                imagen: "img/banner.jpg",
+                imagen: "img/Farmacia 2.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -111,7 +111,7 @@ var categorias = [{
             },
             {
                 nombreEmpresa: "Empresa 3",
-                imagen: "img/banner.jpg",
+                imagen: "img/Farmacia 3.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -143,7 +143,7 @@ var categorias = [{
         icono: "fas fa-utensils",
         empresas: [{
                 nombreEmpresa: "Empresa 1",
-                imagen: "img/banner.jpg",
+                imagen: "img/restaurante-1jpg.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -168,7 +168,7 @@ var categorias = [{
             },
             {
                 nombreEmpresa: "Empresa 2",
-                imagen: "img/banner.jpg",
+                imagen: "img/Restaurante-2.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -307,7 +307,7 @@ var categorias = [{
         icono: "fas fa-coffee",
         empresas: [{
                 nombreEmpresa: "Empresa 1",
-                imagen: "img/banner.jpg",
+                imagen: "img/Cafe-1.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -389,7 +389,7 @@ var categorias = [{
         icono: "fas fa-glass-cheers",
         empresas: [{
                 nombreEmpresa: "Empresa 1",
-                imagen: "img/banner.jpg",
+                imagen: "img/bebidas-1.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -414,7 +414,7 @@ var categorias = [{
             },
             {
                 nombreEmpresa: "Empresa 2",
-                imagen: "img/banner.jpg",
+                imagen: "img/bebida-2.jpg",
                 productos: [{
                         nombreProducto: "Producto 1",
                         descripcion: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, modi!",
@@ -539,7 +539,7 @@ verUsuario();
 
 function cambiarUsuario() {
     let usuarioActivo = document.querySelector('#usuarioSeleccionado').value;
-    document.getElementById('texto-bienvenida').innerHTML = `Hola ${usuario[usuarioActivo].nombre}`;
+    document.getElementById('texto-inicio').innerHTML = `Hola ${usuario[usuarioActivo].nombre}`;
     return usuarioActivo;
 }
 
@@ -590,7 +590,7 @@ function detalleCategoria(idCategoria) {
             productos += `
                     <div class="row p-2">
                         <div class="col-lg-7">
-                            <h4 style="color:#563D7C;">${ detalleProductos.productos[j].nombreProducto }</h4>
+                            <h4>${ detalleProductos.productos[j].nombreProducto }</h4>
                         </div>
                         <div class="col-lg-5">
                             <input type="button" class="btn btn-secondary" onclick="realizarPedido(${ idCategoria } , ${ i } ,${ j })" value="Pedir">
@@ -646,7 +646,7 @@ function realizarPedido(idCategoria, idEmpresa, idProducto) {
         <br>
         <div class="row">
             <div class="col-lg-4">
-                Cantidad A Solicitar : 
+                Ingrese la cantidad a solicitar : 
             </div>
             <div class="col-lg-8">
                 <input type="text" class="form-control" id="cantidad-ingresada" />    
@@ -667,6 +667,7 @@ function realizarPedido(idCategoria, idEmpresa, idProducto) {
         </div>
     `;
 }
+
 
 // Funcion para realizaer el pedido
 function nuevoPedido(nombrePro, descrip, valu2) {
@@ -694,4 +695,8 @@ function crearCategoria() {
     $('#modalDetalle').modal('hide');
     $('#modalNuevaCategoria').modal('show');
 
+}
+// Cerrar la ventana modal con el boton
+function botonCerrar() {
+    $('#modalDetalle').modal('hide');
 }
